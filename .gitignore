@@ -14,3 +14,10 @@ brand/assets/tokens/tokens.json
 brand/pdf/*.pdf
 node_modules/
 package-lock.json
+
+# Generated output — these are your project's directories, not the tool's.
+# brand:components and brand:raster write here; brand:verify checks them.
+public/
+src/
+brand/pdf/src/fonts.css
+brand/.cache/
