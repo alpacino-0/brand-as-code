@@ -1,0 +1,16 @@
+!brand/README.md
+*.log
+.DS_Store
+brand/*.md
+brand/.cache/
+brand/assets/favicon/
+brand/assets/icons/
+brand/assets/logo/
+brand/assets/og/
+brand/assets/patterns/
+brand/assets/tokens/colors.css
+brand/assets/tokens/tailwind.colors.js
+brand/assets/tokens/tokens.json
+brand/pdf/*.pdf
+node_modules/
+package-lock.json

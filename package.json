@@ -1,0 +1,40 @@
+{
+  "name": "brand-as-code",
+  "version": "0.1.0",
+  "description": "Generate a complete brand system from one PNG and one palette file — then verify nobody hand-edited the output.",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "design-system",
+    "brand",
+    "design-tokens",
+    "wcag",
+    "svg",
+    "logo",
+    "brand-guidelines"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "brand:vectorize": "node brand/scripts/vectorize-logo.mjs",
+    "brand:analyze": "node brand/scripts/analyze-logo.mjs",
+    "brand:tokens": "node brand/scripts/build-tokens.mjs",
+    "brand:logo": "node brand/scripts/build-logo.mjs",
+    "brand:icons": "node brand/scripts/build-icons.mjs",
+    "brand:fonts": "node brand/scripts/fetch-fonts.mjs",
+    "brand:raster": "node brand/scripts/build-raster.mjs",
+    "brand:components": "node brand/scripts/build-components.mjs",
+    "brand:docs": "node brand/scripts/build-docs.mjs",
+    "brand:pdf": "node brand/pdf/build.mjs",
+    "brand:preview": "node brand/scripts/preview.mjs",
+    "brand:verify": "node brand/scripts/verify-integration.mjs",
+    "brand:all": "npm run brand:vectorize && npm run brand:analyze && npm run brand:tokens && npm run brand:logo && npm run brand:icons && npm run brand:fonts && npm run brand:raster && npm run brand:components && npm run brand:docs && npm run brand:pdf && npm run brand:verify"
+  },
+  "dependencies": {
+    "opentype.js": "^1.3.4",
+    "playwright-core": "^1.49.0",
+    "potrace": "^2.1.8",
+    "sharp": "^0.34.5"
+  }
+}
